@@ -11,7 +11,7 @@ private const val APP_ID="0b119ac14932aba85806fc0b870975fc"
 
 interface WeatherService {
 
-    @GET("weather/")
+    @GET("weather/?units=metric")
     suspend fun searchWeatherByName(
         @Query("q") query: String,
         @Query("appid") appid: String = APP_ID,
